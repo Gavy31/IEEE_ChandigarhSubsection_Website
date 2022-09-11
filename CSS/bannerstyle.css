@@ -41,9 +41,12 @@
   position: relative;
   margin: auto;
   border-radius: 5px;
+  cursor: pointer;
+
 }
 #cookiepopup a {
   color: #6859fe;
+  cursor: pointer;
 }
 .hide {
   visibility: hidden;

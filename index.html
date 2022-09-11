@@ -54,51 +54,17 @@
 		</div>
 	</nav>
 	<!-- END nav -->
-	<div id="cookiepopup" class="hide">
-		<img src="images/cookie.png" />
+	<!--div id="cookiepopup" class="hide">
+		<img src="images/cookie.png" >
 		<p>
 		  Our website uses cookies to provide your browsing experience and
 		  relevant information. Before continuing to use our website, you agree &
 		  accept of our <a href="#">Cookie Policy & Privacy.</a>
 		</p>
-		<button class="btn btn-primary" id="acceptCookie">Accept</button>
+		<button id="acceptCookie">Accept</button>
 	</div>
-	<script>
-		let popUp = document.getElementById("cookiepopup");
-
-		document.getElementById("acceptCookie").addEventListener("click", () => {
-
-		let d = new Date();
-		
-		d.setMinutes(1 + d.getMinutes());
-		
-		document.cookie = "myCookieName=thisIsMyCookie; expires = " + d + ";";
-		popUp.classList.add("hide");
-		popUp.classList.remove("show");
-		});
-
-		const checkCookie = () => {
-		
-		let input = document.cookie.split("=");
-
-		if (input[0] == "myCookieName") {
-		
-			popUp.classList.add("hide");
-			popUp.classList.remove("show");
-		} else {
-
-			popUp.classList.add("show");
-			popUp.classList.remove("hide");
-		}
-		};
-
-		window.onload = () => {
-		setTimeout(() => {
-			checkCookie();
-		}, 500);
-		};
-	</script>
-
+	<script src="js/bannerscript.js">
+	</script -->
 	  
 	<div class="hero-wrap" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
