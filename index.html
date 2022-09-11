@@ -5,7 +5,6 @@
 	<title>IEEE Chandigarh Subsection</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap"
 		rel="stylesheet">
 
@@ -17,7 +16,7 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<link rel="stylesheet" href="css/aos.css">
-
+	<link rel="stylesheet" href="css/bannerstyle.css" />
 	<link rel="stylesheet" href="css/ionicons.min.css">
 
 	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
@@ -55,7 +54,52 @@
 		</div>
 	</nav>
 	<!-- END nav -->
+	<div id="cookiepopup" class="hide">
+		<img src="images/cookie.png" />
+		<p>
+		  Our website uses cookies to provide your browsing experience and
+		  relevant information. Before continuing to use our website, you agree &
+		  accept of our <a href="#">Cookie Policy & Privacy.</a>
+		</p>
+		<button class="btn btn-primary" id="acceptCookie">Accept</button>
+	</div>
+	<script>
+		let popUp = document.getElementById("cookiepopup");
 
+		document.getElementById("acceptCookie").addEventListener("click", () => {
+
+		let d = new Date();
+		
+		d.setMinutes(1 + d.getMinutes());
+		
+		document.cookie = "myCookieName=thisIsMyCookie; expires = " + d + ";";
+		popUp.classList.add("hide");
+		popUp.classList.remove("show");
+		});
+
+		const checkCookie = () => {
+		
+		let input = document.cookie.split("=");
+
+		if (input[0] == "myCookieName") {
+		
+			popUp.classList.add("hide");
+			popUp.classList.remove("show");
+		} else {
+
+			popUp.classList.add("show");
+			popUp.classList.remove("hide");
+		}
+		};
+
+		window.onload = () => {
+		setTimeout(() => {
+			checkCookie();
+		}, 500);
+		};
+	</script>
+
+	  
 	<div class="hero-wrap" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
@@ -216,7 +260,13 @@
 									</div>
 									<div class="text">
 										<h2>IEEE Chandigarh Subsection</h2>
-										<p>IEEE Chandigarh Subsection is one of the oldest and most distinctively designed subsections, with roots in the IEEE Delhi Section. It is renowned for its solid connections and network, which include numerous student branches that are led and supervised by it. Exercises organised by the IEEE Chandigarh Subsection serve as a focal point for specialised activity throughout the organisations, with events like Hackathons for engineers and coders, Design their Web, Circuit Journey, and Light it up for electrical and electronic nerds attracting a tonne of attention.</p>
+										<p>IEEE Chandigarh Subsection is one of the oldest and most distinctively designed subsections, with roots in the IEEE Delhi Section. It is renowned for its solid connections and network, which include numerous student branches that are led and supervised by it. Exercises organised by the IEEE Chandigarh Subsection serve as a focal point for specialised activity throughout the organisations, with events like Hackathons for engineers and coders, Design their Web, Circuit Journey, and Light it up for electrical and electronic nerds attracting a tonne of attention.
+											On June 18, 2005, the IEEE Delhi Section's Chandigarh Subsection was established, with Dr. Chepuri S. Rao, SMIEEE serving as its Interim Chair. He was then elected to serve as the regular Chairperson of the Subsection Executive Committee. The list of Technical, Professional, Non-Technical, and Administrative events of the Section includes activities of the Subsection for 2021. With effect from July 9, 2021, the following individuals make up the current EXECOM.
+											Dr Arun K Singh (Chairperson),Dr. Yajvender Pal Verma(Vice-Chairman),Dr. Balwinder Raj(Secretary),Mayank Gupta(Treasurer),Dr. Aparna Akula (Member),Dr Jaspreet Singh (Member),Dr. Inderpreeet Kaur(	
+												Member),Mr. Birinderjit Singh (Member),Dr. Anil Kumar(Member),	
+												Dr. Neena Gupta (Past-Chairperson 
+												(Ex-officio)  )
+										</p>
 									</div>
 								</div>
 							</div>
